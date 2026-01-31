@@ -1,1 +1,0 @@
-# object_detection_scratch_students

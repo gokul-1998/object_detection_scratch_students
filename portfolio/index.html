@@ -1,180 +1,850 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Druthi M - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Prithvi HN - Software Developer, AI Enthusiast, and Open Source Contributor. Explore my portfolio showcasing projects in AI/ML, DevOps, and Full-Stack Development.">
+    <meta name="keywords" content="Prithvi HN, Software Developer, AI, Machine Learning, DevOps, Full Stack Developer, Portfolio">
+    <meta name="author" content="Prithvi HN">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prithvi HN | Portfolio">
+    <meta property="og:description" content="Software Developer | AI Enthusiast | Open Source Contributor">
+    <meta property="og:type" content="website">
+    
+    <title>Prithvi HN | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-intro">
-                    <h1>Druthi M</h1>
-                    <p class="subtitle">Bachelor of Engineering | Second Year</p>
-                    <p class="tagline">Passionate about programming and problem-solving</p>
-                </div>
-                <div class="contact-info">
-                    <p><strong>Email:</strong> druthimsgowda@gmail.com</p>
-                    <p><strong>Phone:</strong> 7975564531</p>
-                    <p><strong>Location:</strong> Hebbal, Vijay Nagar 2nd Stage, Mysuru</p>
-                </div>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-code">&lt;/&gt;</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
+            <p class="loader-text">Loading...</p>
         </div>
-    </header>
+    </div>
 
-    <nav class="nav-bar">
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
+    <!-- Cursor Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Prithvi<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <h2>About Me</h2>
-            <p>
-                I'm a dedicated engineering student seeking opportunities to enhance my skills and knowledge while 
-                contributing to organizational growth. With a strong foundation in programming and data structures, 
-                I'm eager to apply my technical expertise to real-world projects.
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div id="particles-js" class="particles"></div>
+        <div class="hero-content">
+            <div class="hero-greeting">
+                <span class="greeting-hi">Hi, I'm</span>
+            </div>
+            <h1 class="hero-name">Prithvi HN</h1>
+            <div class="hero-roles">
+                <span id="typed-text"></span>
+                <span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Passionate about building intelligent systems and contributing to the open-source community. 
+                Currently pursuing B.E. in Computer Science with focus on AI/ML and DevOps.
             </p>
-        </section>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/prithvihn" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/prithvi-hn" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:prithvihn02@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+917892622476" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <h2>Technical Skills</h2>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
+                        Hello! I'm <span class="highlight">Prithvi HN</span>, a passionate Computer Science student at 
+                        <span class="highlight">Maharaja Institute of Technology Mysore</span>, affiliated with 
+                        Visvesvaraya Technological University. I'm on track to graduate in 2027 with a CGPA of 8.71/10.0.
+                    </p>
+                    <p>
+                        My journey in tech began with curiosity about how intelligent systems work. Today, I specialize 
+                        in building <span class="highlight">AI-powered applications</span>, automating 
+                        <span class="highlight">DevOps pipelines</span>, and contributing to 
+                        <span class="highlight">open-source projects</span>.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me solving DSA problems on LeetCode, exploring new technologies, 
+                        or collaborating with the global developer community through hackathons and open-source contributions.
+                    </p>
+                    
+                    <div class="about-education">
+                        <div class="education-card glass-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>B.E. Computer Science</h4>
+                                <p>MIT Mysore • 2023 - 2027</p>
+                                <span class="cgpa">CGPA: 8.71/10.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card glass-card" data-tilt>
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">DSA Problems Solved</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card" data-tilt>
+                        <div class="stat-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Open Source Repos</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card" data-tilt>
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card" data-tilt>
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">02.</span> Technical Skills
+            </h2>
+            
+            <div class="skills-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="languages">Languages</button>
+                <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+                <button class="filter-btn" data-filter="databases">Databases</button>
+            </div>
+            
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>C Programming</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                    </ul>
+                <!-- Programming Languages -->
+                <div class="skill-card glass-card" data-category="languages" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3>Core Concepts</h3>
-                    <ul>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Web Development</li>
-                        <li>HTML</li>
-                    </ul>
+                
+                <div class="skill-card glass-card" data-category="languages" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon cpp">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-name">C++</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3>Personal Skills</h3>
-                    <ul>
-                        <li>Hardworking</li>
-                        <li>Multitasking</li>
-                        <li>Positive Attitude</li>
-                    </ul>
+                
+                <div class="skill-card glass-card" data-category="languages" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon javascript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="languages" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon html">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-name">HTML/CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                
+                <!-- Frameworks -->
+                <div class="skill-card glass-card" data-category="frameworks" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon react">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="skill-name">React.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="frameworks" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon node">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3 class="skill-name">Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="frameworks" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon tensorflow">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="skill-name">TensorFlow</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="frameworks" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon pytorch">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="skill-name">PyTorch</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70"></div>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="skill-card glass-card" data-category="tools" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon docker">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3 class="skill-name">Docker</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="tools" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon kubernetes">
+                        <i class="fas fa-dharmachakra"></i>
+                    </div>
+                    <h3 class="skill-name">Kubernetes</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="tools" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon aws">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="skill-name">AWS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="tools" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon git">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="skill-name">Git/GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="skill-card glass-card" data-category="databases" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon mongodb">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="skill-name">MongoDB</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="databases" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon mysql">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">MySQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card glass-card" data-category="databases" data-tilt data-aos="zoom-in">
+                    <div class="skill-icon postgres">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">PostgreSQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2>Featured Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">03.</span> Featured Projects
+            </h2>
+            
+            <div class="projects-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+            </div>
+            
             <div class="projects-grid">
-                <!-- Project 1: Weather Dashboard -->
-                <article class="project-card">
+                <!-- AI Code Review Assistant -->
+                <div class="project-card glass-card" data-category="ai" data-tilt data-aos="fade-up">
                     <div class="project-image">
-                        <span>Weather Dashboard</span>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/prithvihn" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon-large">
+                            <i class="fas fa-robot"></i>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Weather Dashboard</h3>
-                        <p class="project-desc">A responsive weather dashboard showing real-time forecast data using HTML, CSS, and JavaScript.</p>
-                        <a href="projects/project-1/index.html" class="btn">View Project</a>
+                        <span class="project-category">AI/ML</span>
+                        <h3 class="project-title">AI-Powered Code Review Assistant</h3>
+                        <p class="project-description">
+                            Intelligent code review system using GPT-4 and LangChain to analyze pull requests and provide 
+                            automated feedback on code quality, security vulnerabilities, and best practices.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> 60% reduction in manual review time</li>
+                            <li><i class="fas fa-check"></i> RAG for context-aware suggestions</li>
+                            <li><i class="fas fa-check"></i> Real-time React dashboard</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GPT-4</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Project 2: Task Manager -->
-                <article class="project-card">
+                <!-- Multimodal RAG Chatbot -->
+                <div class="project-card glass-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <span>Task Manager</span>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/prithvihn" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon-large">
+                            <i class="fas fa-comments"></i>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Task Manager</h3>
-                        <p class="project-desc">A feature-rich task management application with local storage persistence and intuitive interface.</p>
-                        <a href="projects/project-2/index.html" class="btn">View Project</a>
+                        <span class="project-category">AI/ML</span>
+                        <h3 class="project-title">Multimodal RAG Chatbot</h3>
+                        <p class="project-description">
+                            Advanced chatbot with multimodal capabilities using vector embeddings stored in Pinecone 
+                            database for semantic search with 85% accuracy improvement over traditional search.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> 85% accuracy improvement</li>
+                            <li><i class="fas fa-check"></i> Conversation memory</li>
+                            <li><i class="fas fa-check"></i> Source citation features</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Pinecone</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Project 3: Calculator -->
-                <article class="project-card">
+                <!-- DevOps Pipeline -->
+                <div class="project-card glass-card" data-category="devops" data-tilt data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
-                        <span>Modern Calculator</span>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/prithvihn" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon-large">
+                            <i class="fas fa-infinity"></i>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Modern Calculator</h3>
-                        <p class="project-desc">A fully functional calculator with a modern design supporting basic arithmetic operations.</p>
-                        <a href="projects/project-3/index.html" class="btn">View Project</a>
+                        <span class="project-category">DevOps</span>
+                        <h3 class="project-title">DevOps Pipeline Automation</h3>
+                        <p class="project-description">
+                            Complete CI/CD pipeline automating build, test, and deployment processes with 
+                            containerized microservices on AWS EKS.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> 70% faster deployments</li>
+                            <li><i class="fas fa-check"></i> 99.9% uptime achieved</li>
+                            <li><i class="fas fa-check"></i> Automated rollback strategies</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
                     </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="education-section">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Bachelor of Engineering (Second Year)</h3>
-                    <p class="institution">Maharaja Institute of Technology, Mysore</p>
-                    <p class="details"><strong>Expected Completion:</strong> 2025 | <strong>CGPA:</strong> 9.1</p>
-                </div>
-                <div class="education-card">
-                    <h3>Pre-University College (12th)</h3>
-                    <p class="institution">Sadvidya Semi Residential PU College</p>
-                    <p class="details"><strong>Passed:</strong> 2023 | <strong>Percentage:</strong> 96%</p>
-                </div>
-                <div class="education-card">
-                    <h3>10th Grade (C.F.T.R.I Public School)</h3>
-                    <p class="institution">C.F.T.R.I Public School</p>
-                    <p class="details"><strong>Passed:</strong> 2021 | <strong>Percentage:</strong> 85%</p>
                 </div>
             </div>
-        </section>
+            
+            <div class="projects-cta" data-aos="fade-up">
+                <a href="https://github.com/prithvihn" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Hobbies Section -->
-        <section id="hobbies" class="hobbies-section">
-            <h2>Interests & Hobbies</h2>
-            <div class="hobbies-grid">
-                <div class="hobby-item">
-                    <h3>Music</h3>
-                    <p>Listening to music helps me relax and stay creative</p>
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">04.</span> Experience
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 2025 – Present
+                            </span>
+                            <span class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Remote
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">Open Source Contributor</h3>
+                        <h4 class="timeline-company">Hacktoberfest 2025 | Verified Tech Contributor</h4>
+                        <ul class="timeline-details">
+                            <li>Contributed verified pull requests to <span class="highlight">10+ open-source repositories</span></li>
+                            <li>Improved documentation and fixed critical bugs across diverse technology stacks</li>
+                            <li>Collaborated with global developers on projects involving React, Python, and DevOps tools</li>
+                            <li>Enhanced code quality and implemented feature additions</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">DevOps</span>
+                            <span class="tech-tag">Open Source</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hobby-item">
-                    <h3>Reading</h3>
-                    <p>I enjoy reading books to broaden my knowledge</p>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                2024 – 2025
+                            </span>
+                            <span class="timeline-location">
+                                <i class="fas fa-code"></i>
+                                Projects
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">AI/ML Development</h3>
+                        <h4 class="timeline-company">Personal & Academic Projects</h4>
+                        <ul class="timeline-details">
+                            <li>Built AI-Powered Code Review Assistant with <span class="highlight">60% review time reduction</span></li>
+                            <li>Developed Multimodal RAG Chatbot with <span class="highlight">85% search accuracy improvement</span></li>
+                            <li>Implemented DevOps pipeline achieving <span class="highlight">99.9% uptime</span></li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tech-tag">GPT-4</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hobby-item">
-                    <h3>Travelling</h3>
-                    <p>Exploring new places and cultures fascinates me</p>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Aug 2023 – Aug 2027
+                            </span>
+                            <span class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Mysore, Karnataka
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">B.E. Computer Science</h3>
+                        <h4 class="timeline-company">Maharaja Institute of Technology Mysore</h4>
+                        <ul class="timeline-details">
+                            <li>Maintaining CGPA of <span class="highlight">8.71/10.0</span></li>
+                            <li>Relevant coursework: Data Structures, Algorithms, Database Management, ML, DevOps</li>
+                            <li>Affiliated with Visvesvaraya Technological University</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tech-tag">DSA</span>
+                            <span class="tech-tag">DBMS</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Personal Details Section -->
-        <section id="personal" class="personal-section">
-            <h2>Personal Details</h2>
-            <div class="personal-details">
-                <p><strong>Date of Birth:</strong> 07-04-2005</p>
-                <p><strong>Nationality:</strong> Indian</p>
-                <p><strong>Languages:</strong> Kannada, English</p>
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">05.</span> Achievements & Certifications
+            </h2>
+            
+            <div class="achievements-grid">
+                <!-- Certifications -->
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up">
+                    <div class="achievement-icon cert">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="achievement-title">AWS S3 Basics</h3>
+                    <p class="achievement-issuer">Amazon Web Services</p>
+                    <span class="achievement-type">Certification</span>
+                </div>
+                
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon cert">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="achievement-title">Front-End Apps with React</h3>
+                    <p class="achievement-issuer">IBM / Coursera</p>
+                    <span class="achievement-type">Certification</span>
+                </div>
+                
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon cert">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="achievement-title">Cybersecurity Analyst</h3>
+                    <p class="achievement-issuer">Tata Group Job Simulation</p>
+                    <span class="achievement-type">Certification</span>
+                </div>
+                
+                <!-- Open Source -->
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon opensource">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="achievement-title">Hacktoberfest 2025</h3>
+                    <p class="achievement-issuer">Verified Tech Contributor</p>
+                    <span class="achievement-type">Open Source</span>
+                </div>
+                
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-icon opensource">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="achievement-title">GSSoC 2025</h3>
+                    <p class="achievement-issuer">GirlScript Summer of Code</p>
+                    <span class="achievement-type">Open Source</span>
+                </div>
+                
+                <!-- Hackathons -->
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="500">
+                    <div class="achievement-icon hackathon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="achievement-title">OdooxNMIT Hackathon</h3>
+                    <p class="achievement-issuer">Participant</p>
+                    <span class="achievement-type">Hackathon</span>
+                </div>
+                
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="600">
+                    <div class="achievement-icon hackathon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="achievement-title">Google Solution Challenge</h3>
+                    <p class="achievement-issuer">Participant</p>
+                    <span class="achievement-type">Hackathon</span>
+                </div>
+                
+                <!-- Competitive Programming -->
+                <div class="achievement-card glass-card" data-tilt data-aos="fade-up" data-aos-delay="700">
+                    <div class="achievement-icon coding">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="achievement-title">LeetCode</h3>
+                    <p class="achievement-issuer">100+ Problems Solved</p>
+                    <span class="achievement-type">Competitive Coding</span>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Druthi M. All rights reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">06.</span> Get In Touch
+            </h2>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect!</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be 
+                        part of your vision. Whether you have a question or just want to say hi, feel free 
+                        to reach out!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:prithvihn02@gmail.com" class="contact-value" id="email-copy">
+                                    prithvihn02@gmail.com
+                                </a>
+                            </div>
+                            <button class="copy-btn" data-copy="prithvihn02@gmail.com" aria-label="Copy email">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+917892622476" class="contact-value">+91-7892622476</a>
+                            </div>
+                            <button class="copy-btn" data-copy="+917892622476" aria-label="Copy phone">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Mysore, Karnataka, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <a href="https://github.com/prithvihn" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/prithvi-hn" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:prithvihn02@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form glass-card" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Prithvi<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-socials">
+                    <a href="https://github.com/prithvihn" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/prithvi-hn" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:prithvihn02@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Designed & Built with <i class="fas fa-heart"></i> by Prithvi HN</p>
+                <p>&copy; 2025 All Rights Reserved</p>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
