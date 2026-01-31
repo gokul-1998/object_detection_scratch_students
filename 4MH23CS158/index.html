@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Portfolio.</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="name">A Creative Developer</h1>
+                <p class="tagline">I build digital experiences that matter.</p>
+                <div class="cta-btns">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured <span>Projects</span></h2>
+                    <p>Here are some of things I've built successfully.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <i class="fa-solid fa-code fa-3x"></i>
+                            <!-- Placeholder for image -->
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Dashboard</h3>
+                            <p>A responsive admin dashboard for tracking sales and managing inventory built with React
+                                and Tailwind.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <i class="fa-solid fa-mobile-screen fa-3x"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Manager App</h3>
+                            <p>A mobile-first productivity application featuring drag-and-drop task management.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <i class="fa-solid fa-robot fa-3x"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>AI Image Generator</h3>
+                            <p>An application that uses OpenAI's API to generate images from text descriptions.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About <span>Me</span></h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a passionate developer with a keen eye for design. I started my coding journey 3 years
+                            ago and haven't looked back since. I love solving complex problems and turning ideas into
+                            reality.</p>
+                        <br>
+                        <p>When I'm not coding, you can find me exploring new technologies, contributing to open source,
+                            or gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In <span>Touch</span></h2>
+                    <p>Have a project in mind or just want to say hi?</p>
+                </div>
+
+                <div class="contact-form-container">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
