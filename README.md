@@ -1,2 +1,2 @@
 
-# welcome to my personal Portfol
+# welcome to my personal Portfolio
